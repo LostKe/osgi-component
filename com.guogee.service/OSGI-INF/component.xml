@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="startup" deactivate="shutdown" name="com.guogee.service">
    <implementation class="com.guogee.listener.Listener"/>
+   <!--org.osgi.service.http.HttpService 提供service 这里使用DS reference 来引用提供的service 给 Listener -->
    <reference bind="setHttp" cardinality="1..1" interface="org.osgi.service.http.HttpService" name="HttpService" policy="static"/>
 </scr:component>
